@@ -1,4 +1,4 @@
-aliases
-=======
+Not Quite .dotfiles
+====================
 
 NO JUDGING
