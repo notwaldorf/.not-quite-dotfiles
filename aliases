@@ -1,11 +1,10 @@
-alias ls="ls -halp --color=auto"
-alias l="ls -halp --color=auto"
-alias lst="ls -tr"
+
+alias s="cd .."
 alias grep="grep -i --color=auto"
 alias psg="ps -feww | grep"
 alias findg="find . -type f -print0 | xargs -0 grep -Ini --color=auto"
 
-alias mine="ps -ef | grep monica"
+alias mine="ps -ef | grep $USER"
 alias what="top -osize"
 
 alias untarGzip="tar -xzvf"
@@ -18,13 +17,21 @@ alias gaa="git add -A"
 alias gcm="git commit -m"
 alias gpl="git pull"
 alias gps="git push"
-alias gll-old="git log --graph --date=short --pretty=format:'%Cgreen%h %Cblue%cd %Cred%an%Creset: %s'"
 alias gll="git log --graph --date=short --pretty=format:'%Cgreen%h %Cblue%cd (%cr) %Cred%an%C(yellow)%d%Creset: %s'"
+alias glll="git log --graph --stat --date=short --pretty=format:'%Cgreen%h %Cblue%cd (%cr) %Cred%an%C(yellow)%d%Creset: %s'"
 alias gundo="git checkout"
 alias gdiff="git diff"
 alias greset="git reset HEAD"
 alias goops="git reset --hard HEAD"
 alias gsh="git stash"
 
+# github
+alias gpages="git push origin master:gh-pages"
+
 alias ee="exit"
 alias qq="exit"
+
+# these may be broken
+#alias ls="ls -halp --color=auto"
+#alias l="ls -halp --color=auto"
+#alias lst="ls -tr"
