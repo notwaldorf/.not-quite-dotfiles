@@ -1,0 +1,30 @@
+# This works for oh-my-zsh. I don't know how regular zsh works.
+
+# Fix the git_prompt_info output
+ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+# Fastest possible way to check if repo is dirty. Thanks brian for anything that looks magical in here.
+git_dirty() {
+  # check if we're in a git repo
+  command git rev-parse --is-inside-work-tree &>/dev/null || return
+  # check if it's dirty
+  command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo ' ⚡︎' || echo ' ☀'
+}
+
+# For my own and others sanity
+# prompt:
+# %F => color dict
+# %f => reset color
+# %~ => current path
+# %c => trail of %~
+# %* => time
+# %n => username
+# %m => shortname host
+# %(?..) => prompt conditional - %(condition.true.false)
+
+PROMPT='
+%F{red}(∩｀-´)⊃━━☆ﾟ.*･｡ﾟ %F{green}%c%F{cyan}$(git_prompt_info) %F{cyan}%`git_dirty` %F{red} ❥ %f'
