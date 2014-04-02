@@ -1,13 +1,11 @@
-# This works for oh-my-zsh. I don't know how regular zsh works.
-
-# Fix the git_prompt_info output
+# Fix the git_prompt_info output for oh-my-zsh.
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
-# Fastest possible way to check if repo is dirty. Thanks brian for anything that looks magical in here.
+# Fastest possible way to check if repo is dirty. Thanks btford for anything that looks magical in here.
 git_dirty() {
   # check if we're in a git repo
   command git rev-parse --is-inside-work-tree &>/dev/null || return
@@ -16,6 +14,9 @@ git_dirty() {
 }
 
 # For my own and others sanity
+# git:
+# %b => current branch
+# %a => current action (rebase/merge)
 # prompt:
 # %F => color dict
 # %f => reset color
@@ -30,5 +31,20 @@ read -d '' SILLY_BIT << EOF
 (∩｀-´)⊃━━☆ﾟ.*･｡ﾟ
 EOF
 
+# This prompt works in oh-my-zsh because og git_prompt_info magic. See below for regular zsh.
 PROMPT='
 %F{red}$(echo "$SILLY_BIT") %F{green}%c%F{cyan}$(git_prompt_info) %F{cyan}%`git_dirty` %f%F{red}❥ %f'
+
+
+# the btford prompt for regular zshs. Uncomment away.
+#autoload -Uz vcs_info
+#zstyle ':vcs_info:*' enable git # You can add hg too if needed: `git hg`
+#zstyle ':vcs_info:git*' formats ' %b'
+#zstyle ':vcs_info:git*' actionformats ' %b|%a'
+
+# enable prompt substitution
+#setopt PROMPT_SUBST
+
+# And the prompt
+#PROMPT='
+#%F{red}$(echo "$SILLY_BIT") %F{green}%c%F{cyan}$vcs_info_msg_0_ %F{cyan}%`git_dirty` %f%F{red}❥ %f'
