@@ -1,7 +1,6 @@
+alias edit="~/bin/subl"
 
 alias s="cd .."
-alias grep="grep -i --color=auto"
-alias psg="ps -feww | grep"
 alias findg="find . -type f -print0 | xargs -0 grep -Ini --color=auto"
 
 alias mine="ps -ef | grep $USER"
@@ -27,6 +26,8 @@ alias gsh="git stash"
 
 # github
 alias gpages="git push origin master:gh-pages"
+
+alias okgo="python -m SimpleHTTPServer"
 
 alias ee="exit"
 alias qq="exit"
