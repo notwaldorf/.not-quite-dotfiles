@@ -27,4 +27,4 @@ git_dirty() {
 # %(?..) => prompt conditional - %(condition.true.false)
 
 PROMPT='
-%F{red}(∩｀-´)⊃━━☆ﾟ.*･｡ﾟ %F{green}%c%F{cyan}$(git_prompt_info) %F{cyan}%`git_dirty` %F{red} ❥ %f'
+%F{red}(∩｀-´)⊃━━☆ﾟ.*･｡ﾟ %F{green}%c%F{cyan}$(git_prompt_info) %F{cyan}%`git_dirty`%F{red} ❥ %f'
