@@ -23,6 +23,7 @@ alias gdiff="git diff"
 alias greset="git reset HEAD"
 alias goops="git reset --hard HEAD"
 alias gsh="git stash"
+alias gnuke="git branch -D"
 
 # github
 alias gpages="git push origin master:gh-pages"
