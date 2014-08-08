@@ -24,6 +24,8 @@ alias greset="git reset HEAD"
 alias goops="git reset --hard HEAD"
 alias gsh="git stash"
 alias gnuke="git branch -D"
+alias gbr="git checkout -b"
+alias gba="git branch -a"
 
 # github
 alias gpages="git push origin master:gh-pages"
