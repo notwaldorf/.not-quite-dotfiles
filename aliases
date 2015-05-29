@@ -27,10 +27,12 @@ alias gsh="git stash"
 alias gnuke="git branch -D"
 alias gbr="git checkout -b"
 alias gba="git branch -a"
+alias squish="git commit -a --amend -C HEAD"
 
 # github
 alias gpages="git push origin master:gh-pages"
 
+alias okbower="rm -rf bower_components && bower cache clean && bower install"
 alias okgo="python -m SimpleHTTPServer"
 
 alias ee="exit"
