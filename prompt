@@ -1,9 +1,15 @@
 # Fix the git_prompt_info output for oh-my-zsh.
 ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}"
-ZSH_THEME_GIT_PROMPT_CLEAN=""
+
+ZSH_THEME_GIT_PROMPT_AHEAD="%{$reset_color%}⇡"
+ZSH_THEME_GIT_PROMPT_BEHIND="%{$reset_color%}⇣"
+
+# set colours if you have text here. i have emoji because obviously.
+#ZSH_THEME_GIT_PROMPT_DIRTY=""
+#ZSH_THEME_GIT_PROMPT_CLEAN=""
+
 
 # Fastest possible way to check if repo is dirty. Thanks btford for anything that looks magical in here.
 git_dirty() {
@@ -33,7 +39,7 @@ EOF
 
 # This prompt works in oh-my-zsh because of git_prompt_info magic. See below for regular zsh.
 PROMPT='
-%F{red}$(echo "$SILLY_BIT") %F{green}%~%F{cyan} on $(git_current_branch) `git_dirty` %f%F{red} ❥ %f'
+%F{red}$(echo "$SILLY_BIT") %F{green}%~%F{cyan} on $(git_current_branch) $(git_prompt_ahead)$(git_prompt_behind)`git_dirty` %f%F{red} ❥ %f'
 
 
 # the btford prompt for regular zshs. Uncomment away.

@@ -29,6 +29,12 @@ source $HOME/.not-quite-dotfiles/prompt
 source $HOME/.not-quite-dotfiles/aliases
 ```
 
+## git
+```
+git config --global user.name my-name
+git config --global user.email my-email
+```
+
 ## node and ruby and stuff
 - [ ] install [nvm](https://github.com/creationix/nvm)
 - [ ] install node/npm
