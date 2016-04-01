@@ -42,8 +42,3 @@ alias okgulp="gulp watch --reload"
 
 alias ee="exit"
 alias qq="exit"
-
-# these may be broken
-#alias ls="ls -halp --color=auto"
-#alias l="ls -halp --color=auto"
-#alias lst="ls -tr"
