@@ -1,5 +1,6 @@
 alias edit="atom"
 alias vi="emacs"
+alias vim="emacs"
 
 alias s="cd .."
 alias findg="find . -type f -print0 | xargs -0 grep -Ini --color=auto"
