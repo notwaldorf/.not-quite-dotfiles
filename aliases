@@ -1,4 +1,4 @@
-alias edit="~/bin/subl"
+alias edit="atom"
 alias vi="emacs"
 
 alias s="cd .."
@@ -32,8 +32,13 @@ alias squish="git commit -a --amend -C HEAD"
 # github
 alias gpages="git push origin master:gh-pages"
 
+# i don't trust bower
 alias okbower="rm -rf bower_components && bower cache clean && bower install"
+
+# servers
 alias okgo="python -m SimpleHTTPServer"
+alias okblog="jekyll serve --watch"
+alias okgulp="gulp watch --reload"
 
 alias ee="exit"
 alias qq="exit"
