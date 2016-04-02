@@ -1,5 +1,5 @@
 # Fix the git_prompt_info output for oh-my-zsh.
-ZSH_THEME_GIT_PROMPT_PREFIX=" on %{$fg[cyan]%}"
+ZSH_THEME_GIT_PROMPT_PREFIX="on %{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_UNTRACKED="%{$fg[cyan]%}"
 
@@ -17,6 +17,13 @@ git_dirty() {
   command git rev-parse --is-inside-work-tree &>/dev/null || return
   # check if it's dirty
   command git diff --quiet --ignore-submodules HEAD &>/dev/null; [ $? -eq 1 ] && echo '☔️' || echo '☀️'
+}
+
+# If it's a git repo, add the git prompt
+git_prompt_go() {
+  # check if we're in a git repo
+  command git rev-parse --is-inside-work-tree &>/dev/null || return
+  echo ' 'on $(git_current_branch) $(git_prompt_ahead)$(git_prompt_behind)`git_dirty`' '
 }
 
 # For my own and others sanity
@@ -39,7 +46,7 @@ EOF
 
 # This prompt works in oh-my-zsh because of git_prompt_info magic. See below for regular zsh.
 PROMPT='
-%F{red}$(echo "$SILLY_BIT") %F{green}%~%F{cyan} on $(git_current_branch) $(git_prompt_ahead)$(git_prompt_behind)`git_dirty` %f%F{red} ❥ %f'
+%F{red}$(echo "$SILLY_BIT") %F{green}%~%F{cyan}`git_prompt_go`%f%F{red} ❥ %f'
 
 
 # the btford prompt for regular zshs. Uncomment away.
