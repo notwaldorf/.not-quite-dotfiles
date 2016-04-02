@@ -12,8 +12,8 @@ alias untarGzip="tar -xzvf"
 alias untarSimple="tar -xvf"
 
 # git protipz
-alias gst="git fetch && git status -sb"  # disable this if you find it too slow, and use the below one.
-# alias gst="git status -sb"
+alias gg="git fetch && git status -sb"  # disable this if you find it too slow, and use the below one
+alias gst="git status -sb"
 alias ga="git add"
 alias gaa="git add -A"
 alias gcm="git commit -m"
