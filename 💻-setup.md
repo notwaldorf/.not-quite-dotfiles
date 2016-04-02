@@ -13,7 +13,7 @@
 - [ ] [Mensch](http://robey.lag.net/2010/06/21/mensch-font.html) font
 - [ ] Homebrew theme, custom colours. Use the dropper tool because I'm setting this up like it's the 90s.
 <img width="326" alt="screen shot 2016-04-01 at 3 29 17 pm" src="https://cloud.githubusercontent.com/assets/1369170/14221858/f6610220-f81e-11e5-8c97-12f4f62c0cbe.png">
-<img width="149" alt="screen shot 2016-04-01 at 3 29 22 pm" src="https://cloud.githubusercontent.com/assets/1369170/14221865/043e22ec-f81f-11e5-8728-e067ee93147e.png">
+<img width="147" alt="screen shot 2016-04-01 at 7 34 12 pm" src="https://cloud.githubusercontent.com/assets/1369170/14223964/bb0b8822-f840-11e5-957c-975bdb5f2889.png">
 
 ## zsh
 - [ ] Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh). I did the `curl` option.
