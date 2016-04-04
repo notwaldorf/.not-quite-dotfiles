@@ -1,0 +1,25 @@
+# this should live in ~/.gitconfig
+
+[credential]
+	helper = osxkeychain
+[user]
+	name = YOUR_NAME
+	email = YOUR_EMAIL
+[url "https://github"]
+	insteadOf = git://github
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = ~/.gitignore
+        editor = emacs
+[help]
+        autocorrect = 1
+[push]
+        # See `git help config` (search for push.default)
+        # for more information on different options of the below setting.
+        #
+        # Setting to git 2.0 default to suppress warning message
+        default = simple
