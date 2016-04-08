@@ -9,6 +9,15 @@
     - This will make you download the Dropbox app
     - 💣 Dropbox has 2FA, so make sure your Authenticator app isn't hosed
 
+## Copying your iMessages over OMG.
+This took way too long to figure out.
+- [ ] copy Archive, Attachments, and the chat-db files (3 of them) from `~Library/Messages` on the old computer
+    - this will take a while. I did it in 3 archives for sanity because 1 enormous archive got corrupted midway. computers.
+- [ ] Delete the existing similar files from the new computer. Don't leave them in your Trash either, so if you want a backup, put them on Google Drive.
+- [ ] Double check that `~/Library/Containers/com.apple.ichat/Data/Library/Messages` has the same shit `~Library/Messages` has
+- [ ] Make sure you're the owner of all these files on the new computer. Better yet, never change your username ever.
+- [ ] Reboot. This is actually important.
+ 
 ## Terminal
 - [ ] [Mensch](http://robey.lag.net/2010/06/21/mensch-font.html) font
 - [ ] Homebrew theme, custom colours. Use the dropper tool because I'm setting this up like it's the 90s.
