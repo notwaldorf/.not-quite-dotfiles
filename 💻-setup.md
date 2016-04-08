@@ -17,7 +17,9 @@ This took way too long to figure out.
 - [ ] Double check that `~/Library/Containers/com.apple.ichat/Data/Library/Messages` has the same shit `~Library/Messages` has
 - [ ] Make sure you're the owner of all these files on the new computer. Better yet, never change your username ever.
 - [ ] Reboot. This is actually important.
- 
+
+Adium messages are straight forward and live at `~/Library/Application Support/Adium 2.0/Users/Default/Logs`
+
 ## Terminal
 - [ ] [Mensch](http://robey.lag.net/2010/06/21/mensch-font.html) font
 - [ ] Homebrew theme, custom colours. Use the dropper tool because I'm setting this up like it's the 90s.
