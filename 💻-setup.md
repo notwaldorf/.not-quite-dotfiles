@@ -53,3 +53,6 @@ git config --global user.email my-email
 - [ ] install the xcode dev tools: `xcode-select --install`
 - [ ] `gem install jekyll` or else your blog will never work
 - [ ] `npm install -g bower/gulp/web-component-tester/polyserve`
+
+## Fonts
+You need Ostrich Sans/League Gothic from [LoMT](www.theleagueofmoveabletype.com) and Cubano/Lavanderia from [LT](http://www.losttype.com/) or else your past keynotes will be hosed.
