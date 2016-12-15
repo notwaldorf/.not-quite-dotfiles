@@ -46,8 +46,12 @@ read -d '' SILLY_BIT << EOF
 (´ ▽｀).。ｏ♡
 EOF
 
+battery_status() {
+  ~/.not-quite-dotfiles/battery-status
+}
+
 # This prompt works in oh-my-zsh because of git_prompt_info magic. See below for regular zsh.
-PROMPT='%F{red}$(echo "$SILLY_BIT") %F{green}%~%F{cyan}`git_prompt_go`%f%F{red} ❥ %f'
+PROMPT='$(battery_status)%F{red}$(echo "$SILLY_BIT") %F{green}%~%F{cyan}`git_prompt_go`%f%F{red} ❥ %f'
 
 # the btford prompt for regular zshs. Uncomment away.
 #autoload -Uz vcs_info
