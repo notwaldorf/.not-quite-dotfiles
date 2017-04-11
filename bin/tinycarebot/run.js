@@ -2,7 +2,10 @@ var Twit = require('twit')
 //var fs = require('fs');
 var env = require('node-env-file');
 
-/* These values come from a .env file of the form:
+/* You need Twitter API keys for this to work. To set it
+one up, go here: https://apps.twitter.com/
+
+These values come from a .env file of the form:
 CONSUMER_KEY='...'
 CONSUMER_SECRET='...'
 ACCESS_TOKEN='...'

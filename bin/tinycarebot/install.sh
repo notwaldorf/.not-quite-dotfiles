@@ -1,4 +1,6 @@
 #!/bin/sh
+#
+# tinycarebot
 
 set -e
 
