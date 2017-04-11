@@ -1,7 +1,4 @@
 {
-  "name": "tiny-terminal-care",
-  "version": "1.0.0",
-  "description": "Prints the last motivational tweet from @tinycarebot",
   "main": "run.js",
   "author": "Monica Dinculescu <noms@google.com>",
   "license": "MIT",
