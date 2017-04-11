@@ -10,9 +10,29 @@ Looks like this:
 - ⇡ and ⇣ says whether you need to push/fetch commits
 - `(´ ▽｀).。ｏ♡` says you're badass
 
-## Sooper advanced usage
-Add this to your `~\.zshrc` file. I use oh-my-zsh, and all of this works for that. If you don't, everything might break and this might open the Hellmouth.
+## Tiny care bot in your terminal
+On every new tab, you can get a motivational tweet from `@tinycarebot`, if
+you've got Twitter API keys set up (I do). Once you've set keys up, and
+ran the `install` steps in the last section, then you can do:
 
-<pre>
+```
+node bin/tinycarebot/run.js
+```
+
+## install
+Run this:
+
+```
+cd ~
+git clone https://github.com/notwaldorf/.not-quite-dotfiles.git
+cd ~/.not-quite-dotfiles
+install
+```
+
+## Sooper advanced usage
+Add this to your `~\.zshrc` file. I use oh-my-zsh, and all of this works for that.
+If you don't, everything might break and this might open the Hellmouth.
+
+```
 source $HOME/.not-quite-dotfiles/custom.zsh
-</pre>
+```
