@@ -34,5 +34,9 @@ Cyan='\033[0;36m'         # Cyan
 White='\033[0;37m'        # White
 
 echo ""
-echo "$Green(●っゝω・)っ ～☆～☆ $Color_Off $(care_bot) $Green ☆～☆～ $Color_Off"
+echo "$Cyan｡.・゜゜・｡.｡☆*☆｡.｡・゜゜・..・゜゜・｡.｡☆*☆｡.｡・゜゜・.｡$Color_Off"
+echo "$Cyan*☆｡.｡・゜゜・.｡  ☆｡.｡・゜・.. *☆｡.｡・゜゜・.｡  ☆｡.｡・゜$Color_Off"
+echo $(care_bot) | fmt -c -w 42
+echo "$Cyan*☆｡.｡・゜゜・.｡  ☆｡.｡・゜・.. *☆｡.｡・゜゜・.｡  ☆｡.｡・゜$Color_Off"
+echo "$Cyan｡.・゜゜・｡.｡☆*☆｡.｡・゜゜・..・゜゜・｡.｡☆*☆｡.｡・゜゜・.｡$Color_Off"
 echo ""
