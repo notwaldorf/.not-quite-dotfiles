@@ -1,5 +1,8 @@
 ## Not quite .dotfiles
-NO JUDGING
+NO JUDGING.
+
+Now that's over: I use oh-my-zsh, and all of this works for that.
+If you don't, everything might break and this might open the Hellmouth. :shrug:
 
 ## Badass prompt
 Looks like this:
@@ -26,13 +29,10 @@ Run this:
 cd ~
 git clone https://github.com/notwaldorf/.not-quite-dotfiles.git
 cd ~/.not-quite-dotfiles
-install
+./install
 ```
 
-## Sooper advanced usage
-Add this to your `~\.zshrc` file. I use oh-my-zsh, and all of this works for that.
-If you don't, everything might break and this might open the Hellmouth.
-
-```
-source $HOME/.not-quite-dotfiles/custom.zsh
-```
+This will:
+  - put the `.gitconfig` in the right place
+  - run all the `install.sh` scripts it finds (currently only for `tinycarebot`)
+  - add `source $HOME/.not-quite-dotfiles/custom.zsh` to your `~/.zshrc` file and do any other `zsh` dances (like copying the `no-theme`)

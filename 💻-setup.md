@@ -31,14 +31,7 @@ Adium messages are straight forward and live at `~/Library/Application Support/A
     - This might hose you on new laptops, so make sure you run `chsh -s /bin/zsh`
     - 💣 before you close this functional terminal, open a new tab to make sure you didn't hose it
     - if you did hose it and your shell can't start, there's a `Shell > New Command` option in the menu
-- [ ] Use the `no-theme` theme
-- [ ] Clone your [dotfiles](https://github.com/notwaldorf/.not-quite.dotfiles) in `~`
-- [ ] Copy the `no-theme` file and move it into `$HOME/.oh-my-zsh/themes`
-- [ ] Source them in the `~/.zshrc`:
-```
-source $HOME/.not-quite-dotfiles/prompt
-source $HOME/.not-quite-dotfiles/aliases
-```
+- [ ] Clone and run `install` from my  [dotfiles](https://github.com/notwaldorf/.not-quite.dotfiles)
 
 ## git
 ```
