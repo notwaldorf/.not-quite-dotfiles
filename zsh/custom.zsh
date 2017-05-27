@@ -2,9 +2,14 @@ ZSH_THEME="no-theme"
 ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# for tiny-care-terminal
+export TTC_REPOS="~/Code"
+export TTC_REPOS_DEPTH=2
+export TTC_GITBOT='gitlog'
+export TTC_WEATHER='San Francisco'
+
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-local LC_ALL=en_US.UTF-8
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.not-quite-dotfiles/zsh/prompt
