@@ -8,10 +8,15 @@ export TTC_REPOS_DEPTH=2
 export TTC_GITBOT='gitlog'
 export TTC_WEATHER='San Francisco'
 
-export TTC_CONSUMER_KEY="CNrRxmOSu9NwFiwAf18Ub8fbf"
-export TTC_CONSUMER_SECRET="XU4E4xzLqURqd1arMiCALnHAq3U6E0KffSaNQv5AN0FkydCknI"
-export TTC_ACCESS_TOKEN="167834639-aLU0bX0tnntu2pCb2q5I4YkenxsPkpFOqWo8H4DX"
-export TTC_ACCESS_TOKEN_SECRET="owlJJFZfW3tyoIKHL5GnY20GnEtjOHBarcDGRx6QJw0ZU"
+# this file contains these vars:
+# export TTC_CONSUMER_KEY="..."
+# export TTC_CONSUMER_SECRET="..."
+# export TTC_ACCESS_TOKEN="..."
+# export TTC_ACCESS_TOKEN_SECRET="..."
+
+if [[ -a $HOME/.not-quite-dotfiles/zsh/secret-keys.zsh ]]; then
+  source $HOME/.not-quite-dotfiles/zsh/secret-keys.zsh
+fi
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
