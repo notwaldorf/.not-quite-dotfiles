@@ -8,6 +8,7 @@ set -e
 # gitconfig
 echo "🐶  updating gitconfig..."
 cp ./git/.gitconfig ~/.gitconfig
+git config --global credential.helper osxkeychain
 
 # find the installers and run them iteratively
 realpath() {
