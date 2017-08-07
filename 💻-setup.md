@@ -34,7 +34,7 @@ git config --global user.email my-email
 
 ## node and ruby and stuff
 - [ ] install [nvm](https://github.com/creationix/nvm), `nvm install node`
-- [ ] install node/npm
+- [ ] `npm install -g bower && npm install -g polymer-cli`
 - [ ] install xcode
 - [ ] install the xcode dev tools: `xcode-select --install`
 - [ ] `gem install jekyll` or else your blog will never work
