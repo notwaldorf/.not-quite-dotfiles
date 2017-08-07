@@ -6,7 +6,7 @@
 set -e
 
 # gitconfig
-echo "🐶  updating gitconfig..."
+echo "🍰  updating gitconfig..."
 cp ./git/.gitconfig ~/.gitconfig
 git config --global credential.helper osxkeychain
 
@@ -25,3 +25,9 @@ do
   echo "   done!"
   )
 done
+
+echo "🍰  getting xcode dev tools..."
+xcode-select --install
+
+echo "🍰  doing a ruby dance..."
+gem install jekyll
