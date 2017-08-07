@@ -6,7 +6,21 @@
 set -e
 
 # gitconfig
+echo "🐶  updating gitconfig..."
 cp ./git/.gitconfig ~/.gitconfig
 
 # find the installers and run them iteratively
-find . -name install.sh | while read installer ; do sh -c "${installer}" ; done
+realpath() {
+    [[ $1 = /* ]] && echo "$1" || echo "$PWD/${1#./}"
+}
+
+for src in $(find -H . -maxdepth 4 -name install.sh | sed 's|/[^/]*$||')
+do
+  (
+  file=`realpath $src`
+  echo "⛑  installing $file..."
+  cd $file
+  sh install.sh
+  echo "   done!"
+  )
+done

@@ -4,4 +4,4 @@
 
 set -e
 
-npm install
+# npm install .

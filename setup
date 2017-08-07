@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+set -e
+
+# zsh
+echo "🎁  zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# nvm
+echo "🎁  nvm..."
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.2/install.sh | bash
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+echo "⛑  setting up node..."
+nvm install node
+
+# run npm things
+echo "⛑  npm installing some stuff..."
+npm install -g bower
+npm install -g polymer-cli

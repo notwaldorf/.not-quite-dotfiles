@@ -29,6 +29,8 @@ Run this:
 cd ~
 git clone https://github.com/notwaldorf/.not-quite-dotfiles.git
 cd ~/.not-quite-dotfiles
+./setup
+## maybe open a new tab
 ./install
 ```
 
