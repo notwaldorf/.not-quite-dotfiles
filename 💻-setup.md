@@ -33,13 +33,14 @@ Adium messages are straight forward and live at `~/Library/Application Support/A
 - [ ] run `install`
 - [ ] definitely open a new tab
 
-## zsh
+## Manual mode (aka "automatic mode didn't work")
+### zsh
 - [ ] Install [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh):
     - This might hose you on new laptops, so make sure you run `chsh -s /bin/zsh`
     - 💣 before you close this functional terminal, open a new tab to make sure you didn't hose it
     - if you did hose it and your shell can't start, there's a `Shell > New Command` option in the menu
 
-## node and ruby and stuff
+### node and ruby and stuff
 - [ ] install [nvm](https://github.com/creationix/nvm)
 - [ ] `nvm install node`
 - [ ] `npm install -g bower && npm install -g polymer-cli`
@@ -48,7 +49,7 @@ Adium messages are straight forward and live at `~/Library/Application Support/A
 - [ ] `gem install jekyll` or else your blog will never work
 - [ ] Clone and run `install` from my  [dotfiles](https://github.com/notwaldorf/.not-quite.dotfiles)
 
-## git
+### git
 ```
 git config --global user.name my-name
 git config --global user.email my-email
