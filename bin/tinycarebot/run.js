@@ -1,15 +1,16 @@
 var Twit = require('twit')
-//var fs = require('fs');
 var env = require('node-env-file');
 
-/* You need Twitter API keys for this to work. To set it
-one up, go here: https://apps.twitter.com/
-
-These values come from a .env file of the form:
+/* For this to work, you need to do two things:
+1. Run `npm install` in this directory
+2. Set up Twitter API keys. See: https://apps.twitter.com/
+3. Add those keys to a `.env` file, and add that file to this directory.
+The file should look like:
 CONSUMER_KEY='...'
 CONSUMER_SECRET='...'
 ACCESS_TOKEN='...'
 ACCESS_TOKEN_SECRET='...'
+(where the dots are your actual values)
 */
 env(__dirname + '/.env');
 

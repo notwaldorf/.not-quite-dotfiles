@@ -3,7 +3,7 @@
   "author": "Monica Dinculescu <noms@google.com>",
   "license": "MIT",
   "dependencies": {
-    "twit": "^2.2.5",
-    "node-env-file": "0.1.8"
+    "node-env-file": "0.1.8",
+    "twit": "^2.2.9"
   }
 }
