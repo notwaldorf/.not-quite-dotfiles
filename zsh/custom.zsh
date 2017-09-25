@@ -3,7 +3,7 @@ ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # for tiny-care-terminal
-export TTC_REPOS="~/Code"
+export TTC_REPOS="~/Code","~/.not-quite-dotfiles"
 export TTC_REPOS_DEPTH=2
 export TTC_GITBOT='gitlog'
 export TTC_WEATHER='San Francisco'
