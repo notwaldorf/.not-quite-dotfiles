@@ -8,7 +8,7 @@ export TTC_REPOS_DEPTH=2
 export TTC_GITBOT='gitlog'
 export TTC_WEATHER='San Francisco'
 
-# this file contains these vars:
+# the secret-keys.zsh file contains these vars:
 # export TTC_CONSUMER_KEY="..."
 # export TTC_CONSUMER_SECRET="..."
 # export TTC_ACCESS_TOKEN="..."
@@ -27,6 +27,9 @@ source $HOME/.not-quite-dotfiles/zsh/aliases
 source $HOME/.not-quite-dotfiles/zsh/chrome
 
 export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+
+# for google cloud sdk
+source $HOME/Code/google-cloud-sdk/path.zsh.inc
 
 export NVM_DIR="/Users/noms/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
