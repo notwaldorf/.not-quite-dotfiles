@@ -15,6 +15,7 @@
 [core]
         excludesfile = ~/.gitignore
         editor = emacs
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [help]
         autocorrect = 1
 [push]
@@ -23,3 +24,15 @@
         #
         # Setting to git 2.0 default to suppress warning message
         default = simple
+[color "diff"]
+       meta = "yellow bold"
+       commit = "green bold"
+       frag = "magenta bold"
+       old = "red bold"
+       new = "green bold"
+       whitespace = "red reverse"
+[color "diff-highlight"]
+       oldNormal = "red bold"
+       oldHighlight = "red bold 52"
+       newNormal = "green bold"
+       newHighlight = "green bold 22"

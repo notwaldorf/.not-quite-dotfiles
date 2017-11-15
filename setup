@@ -21,3 +21,4 @@ nvm install node
 echo "⛑  npm installing some stuff..."
 npm install -g bower
 npm install -g polymer-cli
+npm install -g diff-so-fancy
