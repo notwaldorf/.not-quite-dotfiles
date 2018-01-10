@@ -26,7 +26,7 @@ source $HOME/.not-quite-dotfiles/zsh/prompt
 source $HOME/.not-quite-dotfiles/zsh/aliases
 source $HOME/.not-quite-dotfiles/zsh/chrome
 
-export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin"
+export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools"
 
 # for google cloud sdk
 source $HOME/Code/google-cloud-sdk/path.zsh.inc
