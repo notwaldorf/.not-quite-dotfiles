@@ -22,9 +22,15 @@ git_dirty() {
 
 # If it's a git repo, add the git prompt
 git_prompt_go() {
-  # check if we're in a git repo
-  command git rev-parse --is-inside-work-tree &>/dev/null || return
-  echo ' 'on $(git_current_branch) $(git_prompt_ahead)$(git_prompt_behind)`git_dirty`' '
+  # check if we're in the chromium dir, which is too big to do git shenanigans.
+  if test "$PWD" == "$CHROMIUM_DIR"
+  then
+    echo ' 'on $(git_current_branch)
+  else
+     # check if we're in a git repo
+    command git rev-parse --is-inside-work-tree &>/dev/null || return
+    echo ' 'on $(git_current_branch) $(git_prompt_ahead)$(git_prompt_behind)`git_dirty`' '
+  fi
 }
 
 # For my own and others sanity
@@ -51,16 +57,3 @@ battery_status() {
 
 # This prompt works in oh-my-zsh because of git_prompt_info magic. See below for regular zsh.
 PROMPT='$(battery_status) %F{red}$(echo "$SILLY_BIT")%F{green}%~%F{blue}`git_prompt_go`%f%F{red} ❥ %f'
-
-# the btford prompt for regular zshs. Uncomment away.
-#autoload -Uz vcs_info
-#zstyle ':vcs_info:*' enable git # You can add hg too if needed: `git hg`
-#zstyle ':vcs_info:git*' formats ' %b'
-#zstyle ':vcs_info:git*' actionformats ' %b|%a'
-
-# enable prompt substitution
-#setopt PROMPT_SUBST
-
-# And the prompt
-#PROMPT='
-#%F{red}$(echo "$SILLY_BIT") %F{green}%c%F{cyan}$vcs_info_msg_0_ %F{cyan}%`git_dirty` %f%F{red}❥ %f'

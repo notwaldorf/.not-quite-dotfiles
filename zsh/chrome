@@ -1,5 +1,5 @@
 # The following are essentially the same. Uncomment the one you care about.
-# The only difference is that I seem to use a particular user-data-dir on 
+# The only difference is that I seem to use a particular user-data-dir on
 # Windows (because I don't really speak Windows), and just use the default
 # one on the Mac (which is ~/Library/Application Support/Chromium, I think)
 
@@ -7,23 +7,28 @@
 ### OSX
 #############################
 export PATH="$PATH":~/Code/depot_tools
-export GYP_GENERATORS=ninja
-export GYP_DEFINES='component=shared_library dcheck_always_on=1'
+export CHROMIUM_DIR="/Users/noms/Code/chromium/src"
+
+# Chromium now uses gn, these aren't needed anymore.
+# Leaving them here for history.
+# export GYP_GENERATORS=ninja
+# export GYP_DEFINES='component=shared_library dcheck_always_on=1'
+
 # This shows remaining/total build files.
 export NINJA_STATUS="[%u/%t] "
 
-alias make_="time caffeinate ninja -C ~/Code/chromium/src/out/Release chrome"
-alias go_="~/Code/chromium/src/out/Release/Chromium.app/Contents/MacOS/Chromium --no-default-browser-check --disable-hang-monitor"
-alias tests="time caffeinate ninja -C ~/Code/chromium/src/out/Release unit_tests browser_tests"
+alias make_="time caffeinate ninja -C $CHROMIUM_DIR/out/Release chrome"
+alias go_="$CHROMIUM_DIR/out/Release/Chromium.app/Contents/MacOS/Chromium --no-default-browser-check --disable-hang-monitor"
+alias tests="time caffeinate ninja -C $$CHROMIUM_DIR/out/Release unit_tests browser_tests"
 
 # mostly unused nowadays.
-alias make_d="time caffeinate ninja -C ~/Code/chromium/src/out/Debug chrome"
-alias go_d="~/Code/chromium/src/out/Debug/Chromium.app/Contents/MacOS/Chromium --no-default-browser-check --disable-hang-monitor"
-alias fixit="~/Code/chromium/src/build/gyp_chromium"
+alias make_d="time caffeinate ninja -C $CHROMIUM_DIR/out/Debug chrome"
+alias go_d="$CHROMIUM_DIR/out/Debug/Chromium.app/Contents/MacOS/Chromium --no-default-browser-check --disable-hang-monitor"
+alias fixit="$CHROMIUM_DIR/build/gyp_chromium"
 alias halp="echo 1. git checkout -b newBranch master; echo 2. \?\?\?; echo 3. git commit -am "zomg hai"; echo 4. git cl upload; echo 5. git cl try; echo 6. \?\?\?; echo 7. git cl issue;"
 
-# when I want to pull tip-of-tree. 
-alias freshenup="git checkout master && git pull && gclient sync" 
+# when I want to pull tip-of-tree.
+alias freshenup="git checkout master && git pull && gclient sync"
 
 #############################
 ### Windows

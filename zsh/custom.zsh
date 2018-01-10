@@ -20,6 +20,7 @@ fi
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+export EDITOR=emacs
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.not-quite-dotfiles/zsh/prompt
