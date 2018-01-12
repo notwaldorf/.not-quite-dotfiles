@@ -7,7 +7,8 @@
 ### OSX
 #############################
 export PATH="$PATH":~/Code/depot_tools
-export CHROMIUM_DIR="/Users/noms/Code/chromium/src"
+export CHROMIUM_DIR="~/Code/chromium/src"
+export GOMA_DIR="~/goma"
 
 # Chromium now uses gn, these aren't needed anymore.
 # Leaving them here for history.
@@ -20,6 +21,7 @@ export NINJA_STATUS="[%u/%t] "
 alias make_="time caffeinate ninja -C $CHROMIUM_DIR/out/Release chrome"
 alias go_="$CHROMIUM_DIR/out/Release/Chromium.app/Contents/MacOS/Chromium --no-default-browser-check --disable-hang-monitor"
 alias tests="time caffeinate ninja -C $$CHROMIUM_DIR/out/Release unit_tests browser_tests"
+alias regoma="${GOMA_DIR}/goma_ctl.py restart"
 
 # mostly unused nowadays.
 alias make_d="time caffeinate ninja -C $CHROMIUM_DIR/out/Debug chrome"
