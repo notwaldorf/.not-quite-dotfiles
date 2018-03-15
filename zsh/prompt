@@ -57,3 +57,6 @@ battery_status() {
 
 # This prompt works in oh-my-zsh because of git_prompt_info magic. See below for regular zsh.
 PROMPT='$(battery_status) %F{red}$(echo "$SILLY_BIT")%F{green}%~%F{blue}`git_prompt_go`%f%F{red} ❥ %f'
+
+# This prompt is for bash and it has the colours and the silly bit but not the git stuff:
+# PS1='\e[31m$(echo "$SILLY_BIT")\e[32m~\e[34m\e[0m\e[31m ❥ \e[0m'
