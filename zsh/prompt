@@ -48,7 +48,7 @@ git_prompt_go() {
 # %(?..) => prompt conditional - %(condition.true.false)
 
 read -d '' SILLY_BIT << EOF
-❣⃛(❛ั◡˜๑)♥ྉ
+(´｡•ᴗ•｡\`) 
 EOF
 
 battery_status() {
@@ -56,4 +56,4 @@ battery_status() {
 }
 
 # This prompt works in oh-my-zsh because of git_prompt_info magic. See below for regular zsh.
-PROMPT='$(battery_status) %F{red}$(echo "$SILLY_BIT")%F{green}%~%F{blue}`git_prompt_go`%f%F{red} ❥ %f'
+PROMPT='$(battery_status) %F{red}$(echo "$SILLY_BIT ")%F{green}%~%F{blue}`git_prompt_go`%f%F{red} ❥ %f'
