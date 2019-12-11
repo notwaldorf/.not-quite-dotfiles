@@ -9,6 +9,7 @@
 export PATH="$PATH":~/Code/depot_tools
 export CHROMIUM_DIR="~/Code/chromium/src"
 export GOMA_DIR="~/goma"
+export GOMA_OAUTH2_CONFIG_FILE="$HOME/.goma_oauth2_config"
 
 # Chromium now uses gn, these aren't needed anymore.
 # Leaving them here for history.

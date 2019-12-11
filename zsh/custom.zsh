@@ -3,9 +3,9 @@ ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # for tiny-care-terminal
-export TTC_REPOS="~/Code","~/.not-quite-dotfiles"
+export TTC_REPOS="/Users/noms/Code","/Users/noms/.not-quite-dotfiles"
 export TTC_REPOS_DEPTH=2
-export TTC_GITBOT='gitlog'
+# export TTC_GITBOT='gitlog'
 export TTC_WEATHER='San Francisco'
 
 # the secret-keys.zsh file contains these vars:
@@ -27,7 +27,7 @@ source $HOME/.not-quite-dotfiles/zsh/prompt
 source $HOME/.not-quite-dotfiles/zsh/aliases
 source $HOME/.not-quite-dotfiles/zsh/chrome
 
-export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools"
+export PATH="/Users/noms/miniconda2/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools:$HOME/git-lfs"
 
 # for google cloud sdk
 source $HOME/Code/google-cloud-sdk/path.zsh.inc
