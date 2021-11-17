@@ -3,7 +3,7 @@ ENABLE_CORRECTION="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # for tiny-care-terminal
-export TTC_REPOS="/Users/noms/Code","/Users/noms/.not-quite-dotfiles"
+export TTC_REPOS="/Users/monica/Code","/Users/monica/.not-quite-dotfiles"
 export TTC_REPOS_DEPTH=2
 # export TTC_GITBOT='gitlog'
 export TTC_WEATHER='San Francisco'
@@ -20,19 +20,21 @@ fi
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-export EDITOR=emacs
+export EDITOR="emacs"
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.not-quite-dotfiles/zsh/prompt
 source $HOME/.not-quite-dotfiles/zsh/aliases
 source $HOME/.not-quite-dotfiles/zsh/chrome
 
-export PATH="/Users/noms/miniconda2/bin:/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:$HOME/Code/depot_tools:$HOME/git-lfs"
+export PATH="/usr/local/git/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/opt/homebrew/bin/"
+# needs rbenv to be installed or else my system ruby is fuuuuuucked and i can't blog lol
+eval "$(rbenv init - zsh)"
 
 # for google cloud sdk
-source $HOME/Code/google-cloud-sdk/path.zsh.inc
+# source $HOME/Code/google-cloud-sdk/path.zsh.inc
 
-export NVM_DIR="/Users/noms/.nvm"
+export NVM_DIR="/Users/monica/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 care_bot() {
@@ -45,7 +47,8 @@ blerg() {
   echo ""
   echo "$Cyan｡.・゜゜・｡.｡☆*☆｡.｡・゜゜・..・゜゜・｡.｡☆*☆｡.｡・゜゜・.｡$Color_Off"
   echo "$Cyan*☆｡.｡・゜゜・.｡  ☆｡.｡・゜・.. *☆｡.｡・゜゜・.｡  ☆｡.｡・゜$Color_Off"
-  echo $(care_bot) | fmt -c -w 42
+  # echo $(care_bot) | fmt -c -w 42
+  echo "adjust your posture please cutie"
   echo "$Cyan*☆｡.｡・゜゜・.｡  ☆｡.｡・゜・.. *☆｡.｡・゜゜・.｡  ☆｡.｡・゜$Color_Off"
   echo "$Cyan｡.・゜゜・｡.｡☆*☆｡.｡・゜゜・..・゜゜・｡.｡☆*☆｡.｡・゜゜・.｡$Color_Off"
   echo ""
